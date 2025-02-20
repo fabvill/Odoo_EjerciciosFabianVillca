@@ -6,8 +6,11 @@
     "author": "Fabian Villca Toribio",
     "category": "Uncategorized",
     "depends": ["crm"],  
-    "data": [],
-    "installable": True,
-    "application": True,
-    "auto_install": False,
+    "data": [ "security/res_groups.xml" ],
+        "demo":[
+          "demo/demo.xml"  
+        ],
+        "installable": True,
+        "application": True,
+        "auto_install": False,  
 }
