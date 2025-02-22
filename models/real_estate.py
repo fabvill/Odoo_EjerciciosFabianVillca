@@ -6,6 +6,7 @@ class RealEstate(models.Model):
 
     active = fields.Boolean(default=True, invisble=True) 
     name = fields. Char(required=True) 
+    date = fields.Date('Date')
     state = fields.Selection(
         [
             ("new", "New"),
