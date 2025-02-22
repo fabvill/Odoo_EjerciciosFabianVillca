@@ -5,9 +5,11 @@
     "license": "OEEL-1",
     "author": "Fabian Villca Toribio",
     "category": "Uncategorized",
-    "depends": ["crm"],  
+    "depends": ["base"],  
     "data": [ "security/res_groups.xml",
-               "security/ir.model.access.csv"],
+              "security/ir.model.access.csv",
+              "views/real_estate_views.xml",
+              "views/real_menus.xml"],
         "demo":[
           "demo/demo.xml"  
         ],
