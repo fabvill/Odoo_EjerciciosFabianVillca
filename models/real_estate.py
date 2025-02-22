@@ -26,9 +26,23 @@ class RealEstate(models.Model):
 
 
     date_availability = fields.Date(default=_default_date) 
-    expected_price = fields. Float()
+    expected_price = fields. Float (required=True)
     best_offer = fields.Float() 
-    selling_price = fields.Float()
+    selling_price = fields. Float(readonly=True, copy=False)
     description = fields.Text() 
-    bedrooms = fields.Integer() 
-    living_area = fields.Integer()
+    bedrooms = fields.Integer(default=2)
+    living_area = fields. Integer (string="Living Area (sqm)")
+    facades = fields.Integer()
+    garage = fields.Boolean()
+    garden = fields. Boolean()
+    garden_area = fields. Integer()
+    totalarea = fields. Integer()
+    garden_orientation = fields. Selection(
+        [
+        ("north", "North"),
+        ("south", "South"),
+        ("east", "East"),
+        ("west","west"),
+        ],
+    )
+    estate_type_id = fields.Many2one("estate.property.type")
